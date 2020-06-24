@@ -1,0 +1,19 @@
+#+title: The Boogeyman
+
+* Tasks
+** DONE Prototype 1
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2020-06-23 Tue 23:24]
+:END:
+Gets one input and provides two possible answers.
+** DONE Prototype 2
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2020-06-23 Tue 23:56]
+:END:
+Gets two inputs and provide four possible answers.
+** STRT Prototype 3
+:LOGBOOK:
+- State "STRT"       from "TODO"       [2020-06-23 Tue 23:56]
+CLOCK: [2020-06-23 Tue 23:56]
+:END:
+Structure classes.
