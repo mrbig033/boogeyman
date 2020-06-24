@@ -1,7 +1,23 @@
 class GameOut:
-    def __init__(self, usr_choice, line):
-        self.usr_choice = usr_choice
-        self.line = line
+    def __init__(self):
+        self.line = None
+        self.lines = [
+            [
+                "Everything goes back to normal.",
+                "Your journey has just begun!",
+                "Please enter a valid option.",
+            ],
+            [
+                "You drop on a pool of liquid making a splash.",
+                "The evil mechas capture you.",
+                "Please enter a valid option.",
+            ],
+            [
+                "You arrive at NeoCity without problem.",
+                "A mutant dog bites you in the ass. Maybe next time.",
+                "Please enter a valid option.",
+            ],
+        ]
 
     def initial_text(self):
         print(
@@ -12,46 +28,8 @@ class GameOut:
     \t[2] Take the red pill."""
         )
 
-    def dialogue_chooser(self, level, sublevel):
-        lines = [
-            [
-                "Everything goes back to normal.",
-                "Your journey has just begun!",
-                "Please enter a valid option.",
-            ],
-            ["L11", "L12", "L13"],
-            ["L21", "L22", "L23"],
-        ]
-        self.line = lines[level][sublevel]
-
     def _print_fmt(self, text_in):
         print(f"\n\t{text_in}\n")
 
-    def chooser(self, usr_choice):
-        self.usr_choice = usr_choice
-        if self.usr_choice == "1":
-            self._print_fmt(
-                "Everything goes back to normal."
-            )
-        elif self.usr_choice == "2":
-            self._print_fmt(
-                "Your journey has just begun!"
-            )
-        else:
-            self._print_fmt(
-                "Please enter a valid option."
-            )
-
-    def print_out(self):
-        if self.usr_choice == "1":
-            self._print_fmt(
-                "Everything goes back to normal."
-            )
-        elif self.usr_choice == "2":
-            self._print_fmt(
-                "Your journey has just begun!"
-            )
-        else:
-            self._print_fmt(
-                "Please enter a valid option."
-            )
+    def get_line(self, sublevel=0, level=0):
+        self._print_fmt(self.lines[level - 1][sublevel])

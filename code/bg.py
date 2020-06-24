@@ -16,8 +16,8 @@ class Game:
     def run(self):
         self.out.initial_text()
         self.usr_input.get_input()
-        self.out.print_out(
-            self.level, self.usr_input.usr_in
+        self.out.get_line(
+            int(self.level), int(self.usr_input.usr_in)
         )
         self.level += 1
 

@@ -9,4 +9,3 @@ class UsrInput:
         self.usr_in = input(
             "\n\tEnter the desired dialogue option:\n\t"
         )
-        return self.usr_in
